@@ -1,8 +1,7 @@
 body{
     display: flex;
     flex-direction: column;
-
-    flex: 1;
+    height: 100vh;
 }
 
 
@@ -31,8 +30,3 @@ body :nth-last-child(1){
 
 }
 
-:hover{
-    background-color: rgb(red, green, blue);
-
-
-}
