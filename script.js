@@ -13,5 +13,6 @@ for(i = 0; i < divCount; i++){
 
 let divList = document.querySelectorAll(".container");
 
-
-
+for(i = 0; i < gridCount; i++){ 
+    divList.forEach((a) => a.appendChild(grid.cloneNode(true)));
+}
