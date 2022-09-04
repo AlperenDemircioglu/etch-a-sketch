@@ -2,6 +2,8 @@ const div = document.createElement("div");
 div.setAttribute("class", "container");
 const grid = document.createElement("div");
 grid.setAttribute("class", "grid");
+const mainDiv = document.createElement("div");
+mainDiv.setAttribute("class", "main");
 
 
 let divCount = 16;

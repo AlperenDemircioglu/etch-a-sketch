@@ -1,7 +1,15 @@
+html {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
 body{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 50vh;
+    width: 50vh;
 }
 
 
