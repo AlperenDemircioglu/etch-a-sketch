@@ -4,7 +4,7 @@ const grid = document.createElement("div");
 grid.setAttribute("class", "grid");
 
 
-let divCount = 4;
+let divCount = 16;
 let gridCount = divCount;
 
 for(i = 0; i < divCount; i++){

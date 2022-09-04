@@ -1,0 +1,38 @@
+body{
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+.container{
+    display: flex;
+    flex: 1;
+    border-left: 2px solid brown;
+    border-right: 2px solid brown;
+
+}
+
+body :nth-child(2) {
+    border-top: 2px solid brown;
+  }
+
+body :nth-last-child(1){
+    border-bottom: 2px solid brown;
+
+}
+
+.grid {
+    display: flex;
+    flex: 1;
+    border: 2px solid brown;
+    
+
+}
+
+:hover{
+    background-color: rgb(red, green, blue);
+
+
+}
