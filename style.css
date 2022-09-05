@@ -21,11 +21,11 @@ body{
 
 }
 
-body :nth-child(2) {
+.main :nth-child(1) {
     border-top: 2px solid brown;
   }
 
-body :nth-last-child(1){
+.main :nth-last-child(1){
     border-bottom: 2px solid brown;
 
 }
@@ -38,3 +38,8 @@ body :nth-last-child(1){
 
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
