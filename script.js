@@ -33,7 +33,16 @@ if( divCount == 16){
 const container = document.querySelectorAll(".container");
 
 function popUp(){
-    divCount = prompt("Please enter an integer for the grid size.");
+    divCount = prompt("Please enter an integer less than 80 for the matrix.");
+    if(divCount == null || divCount < 16){
+        alert("Matrix size is set to 16x16");
+        divCount = 16;
+    }
+    if(divCount > 80 || divCount == null){
+        alert("Matrix size is set to 80x80");
+        divCount = 80;
+    }
+
     gridCount = divCount;
     while(main.childElementCount > 0){
         main.childNodes.forEach(a => main.removeChild(a));

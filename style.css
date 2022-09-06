@@ -8,8 +8,8 @@ html {
 body{
     display: flex;
     flex-direction: column;
-    height: 50vh;
-    width: 50vh;
+    height: 80vh;
+    width: 80vh;
 }
 
 
@@ -42,4 +42,11 @@ body{
     display: flex;
     flex-direction: column;
     height: 100vh;
+}
+
+button{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+
 }
