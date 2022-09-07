@@ -3,7 +3,7 @@ html {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: #343633;
 
 }
 
@@ -17,24 +17,24 @@ body{
 .container{
     display: flex;
     flex: 1;
-    border-left: 2px solid brown;
-    border-right: 2px solid brown;
+    border-left: 2px solid #524632;
+    border-right: 2px solid #524632;
 
 }
 
 .main :nth-child(1) {
-    border-top: 2px solid brown;
+    border-top: 2px solid #7D70BA;
   }
 
 .main :nth-last-child(1){
-    border-bottom: 2px solid brown;
+    border-bottom: 2px solid #7D70BA;
 
 }
 
 .grid {
     display: flex;
     flex: 1;
-    border: 2px solid brown;
+    border: 2px solid #7D70BA;
     
 
 }
@@ -42,14 +42,16 @@ body{
 .main {
     display: flex;
     flex-direction: column;
-    height: 80vh;
-    width: 80vh;
+    height: 60vh;
+    width: 60vh;
+
 }
 
 button{
     height: 80px;
     width: 80px;
     margin-bottom: 20px;
+    background-color: #7D70BA;
 
 }
 
@@ -59,10 +61,12 @@ footer{
     text-align: center;
     font-weight: bold;
     font-size: larger;
+    color: #DEC1FF;
 }
 
 .header{
     display: flex;
     justify-content: center;
+    color: #C3C49E;
 
 }
