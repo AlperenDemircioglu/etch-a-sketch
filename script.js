@@ -11,21 +11,6 @@ const main = document.querySelector(".main");
 let divCount = 16;
 let gridCount = divCount;
 
-function RGBToHex(r,g,b) {
-    r = r.toString(16);
-    g = g.toString(16);
-    b = b.toString(16);
-  
-    if (r.length == 1)
-      r = "0" + r;
-    if (g.length == 1)
-      g = "0" + g;
-    if (b.length == 1)
-      b = "0" + b;
-  
-    return "#" + r + g + b;
-  }
-
 
 if( divCount == 16){
     for(i = 0; i < divCount; i++){
@@ -46,10 +31,10 @@ if( divCount == 16){
             console.log("help")
         }
         else{
-            let r = e.target.style.background.split("(")[1].split(",")[0];
-            let g = e.target.style.background.split("(")[1].split(",")[1];
-            let b = e.target.style.background.split("(")[1].split(",")[2].split(")")[0];
-            e.target.style.background = `rgb(${r*0,9},${g*0,9}, ${b*0,9})`;
+            let r = parseInt(e.target.style.background.split("(")[1].split(",")[0])*0.8;
+            let g = parseInt(e.target.style.background.split("(")[1].split(",")[1])*0.8;
+            let b = parseInt(e.target.style.background.split("(")[1].split(",")[2].split(")")[0])*0.8;
+            e.target.style.background = `rgb(${r},${g}, ${b})`;
             console.log(r,g,b)
         } 
     })); 
@@ -87,7 +72,17 @@ function popUp(){
   
     
     backgroundGrid.forEach((a) => a.addEventListener("mouseenter", (e) =>{
-        e.target.style.background = setColor();
+        if(e.target.style.background == "") {
+            e.target.style.background = setColor();
+            console.log("help")
+        }
+        else{
+            let r = parseInt(e.target.style.background.split("(")[1].split(",")[0])*0.8;
+            let g = parseInt(e.target.style.background.split("(")[1].split(",")[1])*0.8;
+            let b = parseInt(e.target.style.background.split("(")[1].split(",")[2].split(")")[0])*0.8;
+            e.target.style.background = `rgb(${r},${g}, ${b})`;
+            console.log(r,g,b)
+        } 
     
     
     }))
