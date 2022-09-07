@@ -11,6 +11,22 @@ const main = document.querySelector(".main");
 let divCount = 16;
 let gridCount = divCount;
 
+function RGBToHex(r,g,b) {
+    r = r.toString(16);
+    g = g.toString(16);
+    b = b.toString(16);
+  
+    if (r.length == 1)
+      r = "0" + r;
+    if (g.length == 1)
+      g = "0" + g;
+    if (b.length == 1)
+      b = "0" + b;
+  
+    return "#" + r + g + b;
+  }
+
+
 if( divCount == 16){
     for(i = 0; i < divCount; i++){
         main.appendChild(div.cloneNode(true));
@@ -25,10 +41,19 @@ if( divCount == 16){
     const backgroundGrid = document.querySelectorAll(".grid");
     
     backgroundGrid.forEach((a) => a.addEventListener("mouseenter", (e) =>{
-        e.target.style.background = "black";
-    
-    
-    }))
+        if(e.target.style.background == "") {
+            e.target.style.background = setColor();
+            console.log("help")
+        }
+        else{
+            let r = e.target.style.background.split("(")[1].split(",")[0];
+            let g = e.target.style.background.split("(")[1].split(",")[1];
+            let b = e.target.style.background.split("(")[1].split(",")[2].split(")")[0];
+            e.target.style.background = `rgb(${r*0,9},${g*0,9}, ${b*0,9})`;
+            console.log(r,g,b)
+        } 
+    })); 
+
 }
 const container = document.querySelectorAll(".container");
 
@@ -59,14 +84,20 @@ function popUp(){
     }
     
     const backgroundGrid = document.querySelectorAll(".grid");
+  
     
     backgroundGrid.forEach((a) => a.addEventListener("mouseenter", (e) =>{
-        e.target.style.background = "black";
+        e.target.style.background = setColor();
     
     
     }))
-    
-    
+
+}
+// How To Generate a Random Color in JavaScript-Chris Coyier 
+function setColor() {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    return "#"+randomColor;
+
 }
 
 btn = document.querySelector(".gridSize");
